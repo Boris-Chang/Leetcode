@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+
+int* two_sum(int nums_s[],int target_,const int n_size);
+int main()
+{
+  const int size_ = 4;
+  int nums[size_] = {2,7,1,8};
+  int target = 9;
+  
+  int* result_ = two_sum(nums,target,size_); 
+  for(int i=0;i<size_;i++)
+  {
+    cout<<result_[i]<<" ";
+  }
+  
+  return 0;
+}
+int* two_sum(int nums_[],int target_,const int n_size)
+{
+    int* result_ = new int[n_size];
+    for(int i=0;i<n_size;i++)
+    {
+      for(int j=i+1;j<n_size;j++)
+      {
+        if(nums_[i]+nums_[j] == target_)
+        {
+          result_[i] = i;
+          result_[j] = j;
+        }
+      }
+    }
+    return result_;
+}
