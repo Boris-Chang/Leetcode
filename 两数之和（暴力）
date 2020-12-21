@@ -13,7 +13,7 @@ int main()
   {
     cout<<result_[i]<<" ";
   }
-  
+  delete result[];
   return 0;
 }
 int* two_sum(int nums_[],int target_,const int n_size)
