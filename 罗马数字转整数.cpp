@@ -50,28 +50,28 @@ void test();
 int main()
 {
     test();
+    
     return 0;
 }
 void test()
 {
     string str_ = "XXIV";
-    int sum=0;
-    int preNum = getChar(str_[0]);
-    for(int i=1;i<str_.size();i++)
+    int sum_=0;
+    
+    for(int i=0;i<str_.size();i++)
     {
-        int num_=getChar(str_[i]);
+        int preNum = getChar(str_[i]);
+        int num_=getChar(str_[i+1]);
         if(preNum<num_)
         {
-            sum -= preNum;
+            sum_ -= preNum;
         }
         else
         {
-            sum += preNum;
+            sum_ += preNum;
         }
-        preNum = num_;
     }
-    sum += preNum;
-    cout<<sum<<endl;
+    cout<<sum_<<endl;
 }
 int getChar(char ch)
 {
@@ -98,7 +98,7 @@ int getChar(char ch)
         case 'M': 
             return 1000;
             break;
-        defalut: 
+        default: 
             return 0;
             break;
     }
