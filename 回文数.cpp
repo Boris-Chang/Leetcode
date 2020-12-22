@@ -9,12 +9,11 @@
 using namespace std;
 
 bool isPalindrome(int num_);
+void test();
 int main()
 {
-    int num_ = 121;
-    int result_ = isPalindrome(num_);
-    cout<<result_<<endl;
-
+    test();
+    
     return 0;
 }
 /*
@@ -39,4 +38,10 @@ bool isPalindrome(int num_)
        num_/=10;
    }
    return num_==revertedNumber || num_ == revertedNumber/10;
-}       
+}  
+void test()
+{
+   int num_ = 121;
+    int result_ = isPalindrome(num_);
+    cout<<result_<<endl;   
+}
